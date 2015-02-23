@@ -32,7 +32,8 @@ var Tiles = React.createClass({
     var outerWidth = this.getDOMNode().offsetWidth,
         width = this.props.width,
         padding = this.props.padding,
-        numCols = Math.floor(outerWidth / (width + padding));
+        numCols = Math.min(Math.floor(outerWidth / (width + padding)),
+                           React.Children.count(this.props.children));
 
     this.colHeights = [];
     for (var i = 0; i < numCols; i++) {
