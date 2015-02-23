@@ -19,10 +19,6 @@ var Tiles = React.createClass({
     window.removeEventListener('resize', this.updateDimensions);
   },
 
-  shouldComponentUpdate: function(nextProps, nextState) {
-    return this.state.numCols !== nextState.numCols;
-  },
-
   onTileMount: function(tile) {
     this.tilePos[tile.props.id] = {height: tile.getDOMNode().offsetHeight};
   },
