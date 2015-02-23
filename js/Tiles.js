@@ -1,5 +1,4 @@
 var React = require('react');
-var assign = require('object-assign');
 var Tile = require('./Tile');
 
 var Tiles = React.createClass({
@@ -56,11 +55,8 @@ var Tiles = React.createClass({
         padding = this.props.padding,
         min = this.colHeights.indexOf(Math.min.apply(null, this.colHeights));
 
-    this.tilePos[tile.props.id] = assign(this.tilePos[tile.props.id], {
-      top: this.colHeights.length <= min ? 0 : this.colHeights[min] + padding,
-      left: Math.floor(padding / 2) + min * (width + padding)
-    });
-
+    this.tilePos[tile.props.id].top = this.colHeights.length <= min ? 0 : this.colHeights[min] + padding;
+    this.tilePos[tile.props.id].left = Math.floor(padding / 2) + min * (width + padding);
     this.colHeights[min] += this.tilePos[tile.props.id].height + padding;
   },
 

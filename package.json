@@ -16,7 +16,6 @@
     "watchify": "^2.3.0"
   },
   "dependencies": {
-    "object-assign": "^2.0.0",
     "react": "^0.12.2"
   }
 }
