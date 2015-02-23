@@ -28,6 +28,12 @@ var Tiles = React.createClass({
     this.tilePos[tile.props.id] = {height: tile.getDOMNode().offsetHeight};
   },
 
+  onTileUpdate: function(tile) {
+    this.onTileMount(tile);
+    this.updateDimensions();
+    this.forceUpdate();
+  },
+
   updateDimensions: function() {
     var outerWidth = this.getDOMNode().offsetWidth,
         width = this.props.width,
@@ -79,6 +85,7 @@ var Tiles = React.createClass({
           {React.Children.map(this.props.children, function(tile) {
             tile.props.width = this.props.width;
             tile.props.onTileMount = this.onTileMount;
+            tile.props.onTileUpdate = this.onTileUpdate;
             var pos = this.tilePos[tile.props.id];
             if (pos !== undefined) {
               tile.props.top = pos.top || 0;
