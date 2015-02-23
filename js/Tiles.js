@@ -8,7 +8,7 @@ var Tiles = React.createClass({
   tilePos: {},
 
   getInitialState: function() {
-    return {numCols: 1};
+    return {numCols: 0};
   },
 
   componentDidMount: function() {
@@ -32,8 +32,9 @@ var Tiles = React.createClass({
     var outerWidth = this.getDOMNode().offsetWidth,
         width = this.props.width,
         padding = this.props.padding,
-        numCols = Math.min(Math.floor(outerWidth / (width + padding)),
-                           React.Children.count(this.props.children));
+        numCols = Math.max(Math.min(Math.floor(outerWidth / (width + padding)),
+                                    React.Children.count(this.props.children)),
+                           1);
 
     this.colHeights = [];
     for (var i = 0; i < numCols; i++) {
