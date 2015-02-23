@@ -4,6 +4,7 @@ body {
   font-family: 'Helvetica Neue','Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',arial,sans-serif;
 }
 .reactive-tile {
+  transition: 0.5s ease-in-out;
   background: white;
   //color: #333;
   font-size: 13px;
