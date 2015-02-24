@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "js/app.js",
   "scripts": {
-    "start": "./node_modules/watchify/bin/cmd.js -o js/bundle.js -v -d ."
+    "start": "mkdir dist && browserify -r react -o dist/react.js && watchify -x react -o dist/app.js -v -d ."
   },
   "browserify": {
     "transform": [
