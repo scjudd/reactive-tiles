@@ -1,0 +1,19 @@
+{
+  "name": "reactive-tiles-example",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "./node_modules/browserify/bin/cmd.js -r react -o bundle.js -d app.js"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "reactify": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  }
+}

@@ -1,0 +1,23 @@
+body {
+  background: rgb(233, 233, 233);
+  color: rgb(76, 76, 76);
+  font-family: 'Helvetica Neue','Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',arial,sans-serif;
+}
+.reactive-tile {
+  transition: 0.5s ease-in-out;
+  background: white;
+  //color: #333;
+  font-size: 13px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.reactive-tile h1 {
+  font-size: 14px;
+  padding: 0 13px 0.5em;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+.reactive-tile p {
+  padding: 0 1em;
+}
