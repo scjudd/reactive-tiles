@@ -1,6 +1,8 @@
 var React = require('react');
-var Tiles = require('./Tiles');
-var Tile = require('./Tile');
+var ReactiveTiles = require('..');
+
+var Tiles = ReactiveTiles.Tiles;
+var Tile = ReactiveTiles.Tile;
 
 React.render(
   <Tiles width={236} padding={10}>

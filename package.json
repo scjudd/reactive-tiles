@@ -1,21 +1,16 @@
 {
   "name": "reactive-tiles",
-  "version": "0.0.1",
-  "main": "js/app.js",
-  "scripts": {
-    "start": "mkdir dist && browserify -r react -o dist/react.js && watchify -x react -o dist/app.js -v -d ."
+  "version": "0.0.5",
+  "author": "Spencer Judd <spencercjudd@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scjudd/reactive-tiles.git"
   },
-  "browserify": {
-    "transform": [
-      "reactify"
-    ]
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "jsx src/ lib/"
   },
   "devDependencies": {
-    "browserify": "^8.1.3",
-    "reactify": "^1.0.0",
-    "watchify": "^2.3.0"
-  },
-  "dependencies": {
-    "react": "^0.12.2"
+    "react-tools": "^0.12.2"
   }
 }
